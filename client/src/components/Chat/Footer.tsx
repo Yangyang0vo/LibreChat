@@ -89,17 +89,6 @@ export default function Footer({ className }: { className?: string }) {
       }
       role="contentinfo"
     >
-      {footerElements.map((contentRender, index) => {
-        const isLastElement = index === footerElements.length - 1;
-        return (
-          <React.Fragment key={`footer-element-${index}`}>
-            {contentRender}
-            {!isLastElement && (
-              <div key={`separator-${index}`} className="h-2 border-r-[1px] border-border-medium" />
-            )}
-          </React.Fragment>
-        );
-      })}
     </div>
   );
 }
